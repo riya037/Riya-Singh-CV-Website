@@ -1,0 +1,93 @@
+/* Base Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Animated Button Styles */
+.animated-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background: #669bbc;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.animated-btn::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #383f51;
+    transition: all 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.animated-btn:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.animated-btn span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-btn:hover span {
+    color: #ffd700;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+.animated-btn:not(:hover) span {
+    animation: scaleDown 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

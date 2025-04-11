@@ -65,6 +65,15 @@ body {
   color: white;
 }
 
+.frontvideo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #f2b90a;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
